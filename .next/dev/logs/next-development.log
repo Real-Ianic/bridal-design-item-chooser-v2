@@ -1,0 +1,447 @@
+[00:00:02.299] Server  LOG     
+[00:00:02.299] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:02.300] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:02.300] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:02.300] Server  LOG     
+[00:00:02.301] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:02.301] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:02.301] Server  LOG     
+[00:00:02.960] Server  LOG      ✓ Ready in 2s
+[00:00:13.785] Server  LOG      ○ Compiling / ...
+[00:00:15.260] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:16.216] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:00:16.216] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:00:16.216] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764871268636}
+[00:00:17.087] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:39.901] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22other%22%2C%22name%22%3A%22Other+Gowns+%28Outside+Folders%29%22%2C%22price%22%3A15000%7D&gownPrice=15000&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22topUp%22%3A2000%2C%22description%22%3A%22Premium+photographer%22%7D&videography=%7B%22id%22%3A3%2C%22name%22%3A%22Okra+Films%22%2C%22topUp%22%3A2000%2C%22description%22%3A%22Creative+style%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22other%22%2C%22name%22%3A%22Other+Gowns+%28Outside+Folders%29%22%2C%22price%22%3A15000%7D&gownPrice=15000&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22topUp%22%3A2000%2C%22description%22%3A%22Premium+photographer%22%7D&videography=%7B%22id%22%3A3%2C%22name%22%3A%22Okra+Films%22%2C%22topUp%22%3A2000%2C%22description%22%3A%22Creative+style%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764871292937}
+[00:00:47.454] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764871300487}
+[00:05:09.808] Server  LOG      ✓ Compiled in 152ms
+[00:05:24.854] Server  LOG      ✓ Compiled in 157ms
+[00:09:15.747] Server  LOG      ✓ Compiled in 134ms
+[00:09:26.508] Server  LOG      ✓ Compiled in 174ms
+[00:09:47.358] Server  LOG      ✓ Compiled in 143ms
+[00:10:29.495] Server  LOG      ✓ Compiled in 171ms
+[00:10:35.296] Server  LOG      ✓ Compiled in 146ms
+[00:10:40.000] Server  LOG      ✓ Compiled in 162ms
+[00:12:20.032] Server  LOG      ✓ Compiled in 103ms
+[00:15:38.325] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:38.501] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:15:38.501] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:15:38.501] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:15:38.501] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872191531}
+[00:15:47.140] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22other%22%2C%22name%22%3A%22Other+Gowns+%28Outside+Folders%29%22%7D&gownPrice=0&freshLooks=2&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22other%22%2C%22name%22%3A%22Other+Gowns+%28Outside+Folders%29%22%7D&gownPrice=0&freshLooks=2&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872200172}
+[00:16:20.634] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872233669}
+[00:16:32.656] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22topUp%22%3A600%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22topUp%22%3A600%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872245692}
+[00:16:36.419] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872249454}
+[00:16:44.782] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22topUp%22%3A600%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22topUp%22%3A600%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872257819}
+[00:21:37.808] Server  LOG      ✓ Compiled in 133ms
+[00:21:44.921] Server  LOG      ✓ Compiled in 117ms
+[00:22:09.860] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:22:10.038] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:22:10.038] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:22:10.038] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:22:10.038] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872583075}
+[00:25:19.582] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9088%2C%22description%22%3A%22Premium+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%7D&hairMakeup=%7B%22id%22%3A%22c2%22%2C%22name%22%3A%22Director+MUA%22%2C%22price%22%3A8088%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9088%2C%22description%22%3A%22Premium+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%7D&hairMakeup=%7B%22id%22%3A%22c2%22%2C%22name%22%3A%22Director+MUA%22%2C%22price%22%3A8088%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872772618}
+[00:25:21.577] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872774611}
+[00:25:33.722] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872786756}
+[00:25:45.043] Server  LOG      ✓ Compiled in 109ms
+[00:25:47.119] Server  LOG      ✓ Compiled in 108ms
+[00:25:51.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:51.417] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:25:51.417] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:25:51.417] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872804434}
+[00:25:51.417] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:25:51.417] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:26:35.019] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:35.179] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:26:35.179] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:26:35.179] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:26:35.179] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:26:35.179] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:26:35.179] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872848213}
+[00:27:24.088] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:27:24.088] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:27:24.088] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:27:24.088] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:27:24.088] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872897126}
+[00:27:24.088] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:26.891] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872899917}
+[00:27:36.766] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9588%2C%22description%22%3A%22Premium%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9588%2C%22description%22%3A%22Premium%22%7D&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872909798}
+[00:28:05.088] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764872938115}
+[00:28:46.971] Server  LOG      ✓ Compiled in 157ms
+[00:29:09.543] Server  LOG      ✓ Compiled in 138ms
+[00:29:34.360] Server  LOG      ✓ Compiled in 143ms
+[00:30:23.109] Server  LOG      ✓ Compiled in 118ms
+[00:30:41.626] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873094654}
+[00:30:44.183] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873097209}
+[00:31:11.143] Server  LOG      ✓ Compiled in 135ms
+[00:31:12.216] Browser DEBUG   Total price calculated: 7088
+[00:31:12.216] Browser DEBUG   Total price calculated: 7088
+[00:31:20.849] Server  DEBUG   Total price calculated: 7088
+[00:31:21.146] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:21.313] Browser DEBUG   Total price calculated: 7088
+[00:31:21.313] Browser DEBUG   Total price calculated: 7088
+[00:31:21.313] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:31:21.313] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:21.313] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:31:21.313] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873134348}
+[00:31:22.533] Browser DEBUG   Total price calculated: 7088
+[00:31:22.533] Browser DEBUG   Total price calculated: 7088
+[00:31:23.390] Browser DEBUG   Total price calculated: 14176
+[00:31:23.391] Browser DEBUG   Total price calculated: 14176
+[00:31:24.605] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873137627}
+[00:31:50.257] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:31:50.257] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:31:50.257] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:31:50.257] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:50.257] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:31:50.257] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873163286}
+[00:31:56.341] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:56.540] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:31:56.540] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:31:56.540] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:31:56.540] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:31:56.540] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:31:56.540] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873169572}
+[00:33:28.360] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:33:28.360] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:33:28.360] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:33:28.360] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:33:28.360] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&freshLooks=1&florist=false","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873261390}
+[00:33:28.360] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:33:30.229] Browser DEBUG   Total price calculated: 7088
+[00:33:30.229] Browser DEBUG   Total price calculated: 7088
+[00:33:30.229] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873263265}
+[00:33:33.037] Browser DEBUG   Total price calculated: 7088
+[00:33:33.037] Browser DEBUG   Total price calculated: 7088
+[00:33:39.253] Browser DEBUG   Total price calculated: 14176
+[00:33:39.253] Browser DEBUG   Total price calculated: 14176
+[00:33:41.197] Browser DEBUG   Total price calculated: 14176
+[00:33:41.197] Browser DEBUG   Total price calculated: 14176
+[00:33:42.265] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873275297}
+[00:33:55.059] Server  LOG      ✓ Compiled in 115ms
+[00:33:56.766] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:56.951] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:33:56.951] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:33:56.951] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873289946}
+[00:33:56.951] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:33:56.951] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:33:56.951] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:43:45.932] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:46.136] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:43:46.136] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:43:46.136] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
+[00:43:46.136] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=false","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873879145}
+[00:43:46.136] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <SegmentViewNode type="page" pagePath="summary/pa...">
+      <SegmentTrieNode>
+      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
+        <SummaryPage params={Promise} searchParams={Promise}>
+          <Suspense fallback={<div>}>
+            <SummaryContent>
+              <main className="min-h-scre...">
+                <Header>
+                <div className="max-w-2xl ...">
+                  <div>
+                  <div>
+                  <Card className="border-pri...">
+                    <div data-slot="card" className="text-card-...">
+                      <CardContent className="pt-6">
+                        <div data-slot="card-content" className="px-6 pt-6">
+                          <div className="flex justi...">
+                            <span>
+                            <span className="text-3xl f...">
++                             7,088
+-                             7.088
+                  ...
+    ...
+
+[00:43:46.136] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:43:48.283] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873881320}
+[00:43:54.181] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:54.329] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:43:54.329] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:43:54.329] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:43:54.329] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873887364}
+[00:44:28.655] Server  LOG      ✓ Compiled in 169ms
+[00:44:34.624] Server  LOG      ✓ Compiled in 132ms
+[00:44:39.384] Server  LOG      ✓ Compiled in 136ms
+[00:44:43.200] Server  LOG      ✓ Compiled in 106ms
+[00:44:54.382] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:54.547] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:44:54.547] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:44:54.547] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:44:54.547] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873947582}
+[00:45:08.216] Server  LOG      ✓ Compiled in 221ms
+[00:45:09.857] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:45:09.998] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:45:09.998] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:45:09.998] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:45:09.998] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873963033}
+[00:45:29.952] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9088%2C%22description%22%3A%22Premium+photographer%22%2C%22topUp%22%3A1%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22price%22%3A7688%2C%22topUp%22%3A1%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A2%2C%22name%22%3A%22Superpanda+Jose+Daniel%22%2C%22price%22%3A9088%2C%22description%22%3A%22Premium+photographer%22%2C%22topUp%22%3A1%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22c1%22%2C%22name%22%3A%22Senior+MUA%22%2C%22price%22%3A7688%2C%22topUp%22%3A1%2C%22vendor%22%3A%22The+Make-up+Room%22%7D&freshLooks=2&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1764873982984}
