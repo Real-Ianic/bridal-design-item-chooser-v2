@@ -105,8 +105,8 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
                       variant={selections.hairMakeup?.id === option.id ? "default" : "outline"}
                       onClick={() => handleSelect(option, vendor.vendor)}
                       className={`w-full justify-start text-left text-sm h-auto p-3 flex flex-col items-start ${selections.hairMakeup?.id === option.id
-                          ? "bg-primary text-primary-foreground"
-                          : "hover:border-primary"
+                        ? "bg-primary text-primary-foreground"
+                        : "hover:border-primary"
                         }`}
                     >
                       <span className="font-semibold">{option.name}</span>
