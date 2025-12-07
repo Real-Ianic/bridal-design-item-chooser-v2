@@ -55,7 +55,7 @@ export const PRICING_CONFIG = {
     },
     alyciaTan: {
       vendor: "Alycia Tan",
-      options: [{ id: "b1", name: "Alycia Tan", price: 7088, topUp: 1 }],
+      options: [{ id: "b1", name: "Alycia Tan", price: 7088 }],
     },
     makeupRoom: {
       vendor: "The Make-up Room",
