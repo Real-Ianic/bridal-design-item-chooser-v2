@@ -46,7 +46,7 @@ export default function Home() {
       <Header />
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance" style={{ fontFamily: 'Caviar Dreams' }}>
             Actual Day Package
           </h1>
           <p className="text-base md:text-lg text-muted-foreground">
