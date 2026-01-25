@@ -4,6 +4,7 @@ import type React from "react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { ChevronDown, Check } from "lucide-react"
 import { PRICING_CONFIG } from "@/lib/pricing-config"
@@ -17,6 +18,7 @@ const hairMakeupVendors = Object.values(PRICING_CONFIG.hairMakeup).map((vendor, 
 export default function HairMakeupSelector({ selections, setSelections }: any) {
   const [expandedVendor, setExpandedVendor] = useState<number | null>(null)
   const [expandedFreshLooks, setExpandedFreshLooks] = useState(false)
+  const [customPrice, setCustomPrice] = useState<string>("")
 
   const handleSelect = (option: any, vendor: string) => {
     setSelections({
@@ -25,8 +27,10 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
         ...option,
         vendor,
       },
+      hairMakeupPrice: 0,
       freshLooks: 1,
     })
+    setCustomPrice("")
   }
 
   const handleFreshLooksSelect = (count: number) => {
@@ -42,7 +46,9 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
         setSelections({
           ...selections,
           hairMakeup: null,
+          hairMakeupPrice: 0,
         })
+        setCustomPrice("")
       }
       setExpandedVendor(null)
     } else {
@@ -56,10 +62,23 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
       setSelections({
         ...selections,
         hairMakeup: null,
+        hairMakeupPrice: 0,
         freshLooks: 0,
       })
       setExpandedVendor(null)
       setExpandedFreshLooks(false)
+      setCustomPrice("")
+    }
+  }
+
+  const handlePriceConfirm = () => {
+    if (selections.hairMakeup && customPrice) {
+      const price = Number.parseFloat(customPrice) || 0
+      setSelections({
+        ...selections,
+        hairMakeupPrice: price,
+      })
+      setCustomPrice("")
     }
   }
 
@@ -123,6 +142,29 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
           ))}
         </div>
 
+        {selections.hairMakeup && (
+          <div className="border-t pt-4 space-y-3">
+            <div>
+              <label className="text-sm font-medium text-foreground">Enter price for {selections.hairMakeup.name} ($)</label>
+              <div className="flex gap-2 mt-2">
+                <Input
+                  type="number"
+                  placeholder="0"
+                  value={customPrice}
+                  onChange={(e) => setCustomPrice(e.target.value)}
+                  className="flex-1"
+                />
+                <Button onClick={handlePriceConfirm} className="bg-primary hover:bg-primary/90">
+                  Confirm
+                </Button>
+              </div>
+              {selections.hairMakeupPrice > 0 && (
+                <p className="text-sm text-green-600 font-medium mt-2">Price set: ${selections.hairMakeupPrice}</p>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className="border-t pt-4">
           <Button
             variant="outline"
@@ -158,15 +200,22 @@ export default function HairMakeupSelector({ selections, setSelections }: any) {
         </div>
 
         {isSelected && (
-          <div className="border-t pt-3 text-sm">
+          <div className="border-t pt-3 text-sm space-y-1">
             {selections.hairMakeup && (
-              <p className="text-foreground">
-                <span className="font-semibold">MUA:</span> {selections.hairMakeup.vendor} -{" "}
-                {selections.hairMakeup.name}
-              </p>
+              <>
+                <p className="text-foreground">
+                  <span className="font-semibold">MUA:</span> {selections.hairMakeup.vendor} -{" "}
+                  {selections.hairMakeup.name}
+                </p>
+                {selections.hairMakeupPrice > 0 && (
+                  <p className="text-foreground">
+                    <span className="font-semibold">Price:</span> ${selections.hairMakeupPrice}
+                  </p>
+                )}
+              </>
             )}
             {selections.freshLooks && (
-              <p className="text-foreground mt-1">
+              <p className="text-foreground">
                 <span className="font-semibold">Fresh Looks:</span> {selections.freshLooks}{" "}
                 {selections.freshLooks === 1 ? "Look" : "Looks"}
               </p>

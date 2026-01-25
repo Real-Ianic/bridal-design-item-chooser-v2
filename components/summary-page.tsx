@@ -10,10 +10,10 @@ export default function SummaryPage({ selections, onBack }: any) {
   const calculatePrice = () => {
     let total = basePrice
     if (selections.gownPrice) total += selections.gownPrice
-    if (selections.photography?.topUp) total += selections.photography.topUp
-    if (selections.videography?.topUp) total += selections.videography.topUp
-    if (selections.hairMakeup?.topUp) total += selections.hairMakeup.topUp
-    if (selections.hairMakeupLooks === 2) total += 500
+    if (selections.photographyPrice) total += selections.photographyPrice
+    if (selections.videographyPrice) total += selections.videographyPrice
+    if (selections.hairMakeupPrice) total += selections.hairMakeupPrice
+    if (selections.floristPrice) total += selections.floristPrice
     return total
   }
 
@@ -49,8 +49,8 @@ export default function SummaryPage({ selections, onBack }: any) {
             </CardHeader>
             <CardContent className="space-y-2">
               <p className="font-semibold">{selections.photography.name}</p>
-              {selections.photography.topUp > 0 && (
-                <p className="text-sm text-muted-foreground">${selections.photography.topUp} top-up</p>
+              {selections.photographyPrice > 0 && (
+                <p className="text-sm text-muted-foreground">${selections.photographyPrice}</p>
               )}
             </CardContent>
           </Card>
@@ -67,8 +67,8 @@ export default function SummaryPage({ selections, onBack }: any) {
             </CardHeader>
             <CardContent className="space-y-2">
               <p className="font-semibold">{selections.videography.name}</p>
-              {selections.videography.topUp > 0 && (
-                <p className="text-sm text-muted-foreground">${selections.videography.topUp} top-up</p>
+              {selections.videographyPrice > 0 && (
+                <p className="text-sm text-muted-foreground">${selections.videographyPrice}</p>
               )}
             </CardContent>
           </Card>
@@ -86,11 +86,11 @@ export default function SummaryPage({ selections, onBack }: any) {
             <CardContent className="space-y-2">
               <p className="font-semibold">{selections.hairMakeup.vendor}</p>
               <p className="text-sm">{selections.hairMakeup.name}</p>
-              {selections.hairMakeup.topUp > 0 && (
-                <p className="text-sm text-muted-foreground">${selections.hairMakeup.topUp} top-up</p>
+              {selections.hairMakeupPrice > 0 && (
+                <p className="text-sm text-muted-foreground">${selections.hairMakeupPrice}</p>
               )}
               {selections.hairMakeupLooks === 2 && (
-                <p className="text-sm text-muted-foreground">Fresh Looks (2) - $500 top-up</p>
+                <p className="text-sm text-muted-foreground">Fresh Looks (2)</p>
               )}
             </CardContent>
           </Card>
@@ -105,8 +105,10 @@ export default function SummaryPage({ selections, onBack }: any) {
                 Florist Services
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-sm">Included in package</p>
+            <CardContent className="space-y-2">
+              {selections.floristPrice > 0 && (
+                <p className="text-sm">${selections.floristPrice}</p>
+              )}
             </CardContent>
           </Card>
         )}
@@ -120,36 +122,36 @@ export default function SummaryPage({ selections, onBack }: any) {
         <CardContent className="space-y-2">
           <div className="flex justify-between">
             <span>Base Package</span>
-            <span>${basePrice}</span>
+            <span>${basePrice.toLocaleString()}</span>
           </div>
           {selections.gownPrice > 0 && (
             <div className="flex justify-between">
               <span>Gown Selection</span>
-              <span>${selections.gownPrice}</span>
+              <span>${selections.gownPrice.toLocaleString()}</span>
             </div>
           )}
-          {selections.photography?.topUp > 0 && (
+          {selections.photographyPrice > 0 && (
             <div className="flex justify-between">
-              <span>Photography Top-up</span>
-              <span>${selections.photography.topUp}</span>
+              <span>Photography</span>
+              <span>${selections.photographyPrice.toLocaleString()}</span>
             </div>
           )}
-          {selections.videography?.topUp > 0 && (
+          {selections.videographyPrice > 0 && (
             <div className="flex justify-between">
-              <span>Videography Top-up</span>
-              <span>${selections.videography.topUp}</span>
+              <span>Videography</span>
+              <span>${selections.videographyPrice.toLocaleString()}</span>
             </div>
           )}
-          {selections.hairMakeup?.topUp > 0 && (
+          {selections.hairMakeupPrice > 0 && (
             <div className="flex justify-between">
-              <span>Hair & Make-up Top-up</span>
-              <span>${selections.hairMakeup.topUp}</span>
+              <span>Hair & Make-up</span>
+              <span>${selections.hairMakeupPrice.toLocaleString()}</span>
             </div>
           )}
-          {selections.hairMakeupLooks === 2 && (
+          {selections.floristPrice > 0 && (
             <div className="flex justify-between">
-              <span>Fresh Looks (2)</span>
-              <span>$500</span>
+              <span>Florist Services</span>
+              <span>${selections.floristPrice.toLocaleString()}</span>
             </div>
           )}
           <div className="border-t pt-2 flex justify-between text-lg font-bold text-primary">

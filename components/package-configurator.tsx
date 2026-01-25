@@ -33,10 +33,14 @@ export default function PackageConfigurator({
     if (selections.gown) params.set("gown", JSON.stringify(selections.gown))
     params.set("gownPrice", selections.gownPrice.toString())
     if (selections.photography) params.set("photography", JSON.stringify(selections.photography))
+    params.set("photographyPrice", selections.photographyPrice.toString())
     if (selections.videography) params.set("videography", JSON.stringify(selections.videography))
+    params.set("videographyPrice", selections.videographyPrice.toString())
     if (selections.hairMakeup) params.set("hairMakeup", JSON.stringify(selections.hairMakeup))
+    params.set("hairMakeupPrice", selections.hairMakeupPrice.toString())
     params.set("freshLooks", selections.freshLooks?.toString() || "1")
     params.set("florist", selections.florist.toString())
+    params.set("floristPrice", selections.floristPrice.toString())
     return params.toString()
   }
 

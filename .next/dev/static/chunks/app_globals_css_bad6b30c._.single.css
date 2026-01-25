@@ -726,6 +726,10 @@
     display: none;
   }
 
+  .inline-block {
+    display: inline-block;
+  }
+
   .inline-flex {
     display: inline-flex;
   }
@@ -1415,6 +1419,10 @@
     justify-self: flex-end;
   }
 
+  .justify-self-start {
+    justify-self: flex-start;
+  }
+
   .overflow-auto {
     overflow: auto;
   }
@@ -2071,6 +2079,10 @@
 
   .text-yellow-600 {
     color: var(--color-yellow-600);
+  }
+
+  .italic {
+    font-style: italic;
   }
 
   .tabular-nums {
@@ -5113,6 +5125,13 @@
   initial-value: 0;
 }
 
+@font-face {
+  font-family: Caviar Dreams;
+  src: url("/fonts/CaviarDreams.woff2") format("woff2"), url("/fonts/CaviarDreams.woff") format("woff"), url("/fonts/CaviarDreams.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #fff;
   --foreground: #241c19;
@@ -5120,7 +5139,7 @@
   --card-foreground: #322b34;
   --popover: #fff;
   --popover-foreground: #322b34;
-  --primary: #b62039;
+  --primary: #e11d48;
   --primary-foreground: #fcfcfc;
   --secondary: #f2eeee;
   --secondary-foreground: #322b34;
@@ -5128,12 +5147,12 @@
   --muted-foreground: #68606a;
   --accent: #ebdbd6;
   --accent-foreground: #322b34;
-  --destructive: #ef4444;
+  --destructive: #e11d48;
   --destructive-foreground: #e40014;
   --border: #e8e0de;
   --input: #e8e0de;
-  --ring: #b62039;
-  --chart-1: #b62039;
+  --ring: #e11d48;
+  --chart-1: hsl#e11d48;
   --chart-2: #dd684b;
   --chart-3: #e99b63;
   --chart-4: #f04c83;

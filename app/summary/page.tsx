@@ -11,8 +11,6 @@ function SummaryContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const basePrice = 7088
-
   // Parse selections from URL params
   const selections = {
     gown: searchParams.get("gown") ? JSON.parse(decodeURIComponent(searchParams.get("gown") || "")) : null,
@@ -20,23 +18,27 @@ function SummaryContent() {
     photography: searchParams.get("photography")
       ? JSON.parse(decodeURIComponent(searchParams.get("photography") || ""))
       : null,
+    photographyPrice: Number(searchParams.get("photographyPrice") || 0),
     videography: searchParams.get("videography")
       ? JSON.parse(decodeURIComponent(searchParams.get("videography") || ""))
       : null,
+    videographyPrice: Number(searchParams.get("videographyPrice") || 0),
     hairMakeup: searchParams.get("hairMakeup")
       ? JSON.parse(decodeURIComponent(searchParams.get("hairMakeup") || ""))
       : null,
+    hairMakeupPrice: Number(searchParams.get("hairMakeupPrice") || 0),
     freshLooks: Number(searchParams.get("freshLooks") || 1),
     florist: searchParams.get("florist") === "true",
+    floristPrice: Number(searchParams.get("floristPrice") || 0),
   }
 
   const calculatePrice = () => {
-    let total = basePrice
+    let total = 0
     if (selections.gownPrice) total += selections.gownPrice
-    if (selections.photography?.topUp) total += selections.photography.topUp
-    if (selections.videography?.topUp) total += selections.videography.topUp
-    if (selections.hairMakeup?.topUp) total += selections.hairMakeup.topUp
-    if (selections.freshLooks === 2) total += 500
+    if (selections.photographyPrice) total += selections.photographyPrice
+    if (selections.videographyPrice) total += selections.videographyPrice
+    if (selections.hairMakeupPrice) total += selections.hairMakeupPrice
+    if (selections.floristPrice) total += selections.floristPrice
     return total
   }
 
@@ -57,8 +59,9 @@ function SummaryContent() {
             <CardHeader>
               <CardTitle className="text-lg text-primary">Gown</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-2">
               <p className="font-semibold text-foreground">{selections.gown?.name}</p>
+              {selections.gownPrice > 0 && <p className="text-sm text-muted-foreground">${selections.gownPrice}</p>}
             </CardContent>
           </Card>
 
@@ -71,8 +74,9 @@ function SummaryContent() {
                   Photography
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-2">
                 <p className="font-semibold text-foreground">{selections.photography.name}</p>
+                {selections.photographyPrice > 0 && <p className="text-sm text-muted-foreground">${selections.photographyPrice}</p>}
               </CardContent>
             </Card>
           )}
@@ -86,8 +90,9 @@ function SummaryContent() {
                   Videography
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-2">
                 <p className="font-semibold text-foreground">{selections.videography.name}</p>
+                {selections.videographyPrice > 0 && <p className="text-sm text-muted-foreground">${selections.videographyPrice}</p>}
               </CardContent>
             </Card>
           )}
@@ -104,6 +109,7 @@ function SummaryContent() {
               <CardContent className="space-y-1">
                 <p className="font-semibold text-foreground">{selections.hairMakeup.vendor}</p>
                 <p className="text-sm text-foreground">{selections.hairMakeup.name}</p>
+                {selections.hairMakeupPrice > 0 && <p className="text-sm text-muted-foreground">${selections.hairMakeupPrice}</p>}
                 {selections.freshLooks === 2 && <p className="text-sm text-foreground">Fresh Looks: 2</p>}
                 {selections.freshLooks === 1 && <p className="text-sm text-foreground">Fresh Looks: 1</p>}
               </CardContent>
@@ -119,12 +125,55 @@ function SummaryContent() {
                   Florist Services
                 </CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-foreground">Included</p>
+              <CardContent className="space-y-2">
+                {selections.floristPrice > 0 && <p className="text-sm text-foreground">${selections.floristPrice}</p>}
               </CardContent>
             </Card>
           )}
         </div>
+
+        {/* Pricing Breakdown */}
+        <Card className="border-primary bg-accent mt-8">
+          <CardHeader>
+            <CardTitle className="text-primary">Pricing Breakdown</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2">
+            {selections.gownPrice > 0 && (
+              <div className="flex justify-between">
+                <span>Gown Selection</span>
+                <span>${selections.gownPrice.toLocaleString()}</span>
+              </div>
+            )}
+            {selections.photographyPrice > 0 && (
+              <div className="flex justify-between">
+                <span>Photography</span>
+                <span>${selections.photographyPrice.toLocaleString()}</span>
+              </div>
+            )}
+            {selections.videographyPrice > 0 && (
+              <div className="flex justify-between">
+                <span>Videography</span>
+                <span>${selections.videographyPrice.toLocaleString()}</span>
+              </div>
+            )}
+            {selections.hairMakeupPrice > 0 && (
+              <div className="flex justify-between">
+                <span>Hair & Make-up</span>
+                <span>${selections.hairMakeupPrice.toLocaleString()}</span>
+              </div>
+            )}
+            {selections.floristPrice > 0 && (
+              <div className="flex justify-between">
+                <span>Florist Services</span>
+                <span>${selections.floristPrice.toLocaleString()}</span>
+              </div>
+            )}
+            <div className="border-t pt-2 flex justify-between text-lg font-bold text-primary">
+              <span>Total</span>
+              <span>${totalPrice.toLocaleString()}</span>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Total Investment */}
         <Card className="border-primary bg-accent mt-8">

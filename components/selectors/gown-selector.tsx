@@ -11,6 +11,7 @@ import { Check } from "lucide-react"
 export default function GownSelector({ selections, setSelections }: any) {
   const folderOptions = [{ id: "folders", name: "1 Gown from Folder 1,2,3", price: 0 }]
 
+  const [folderPrice, setFolderPrice] = useState<string>("")
   const [otherGownPrice, setOtherGownPrice] = useState<string>("")
 
   const handleSelectFolder = (gown: any) => {
@@ -20,6 +21,18 @@ export default function GownSelector({ selections, setSelections }: any) {
       gownPrice: 0,
       gownPriceType: "folder",
     })
+    setFolderPrice("")
+  }
+
+  const handleFolderPriceConfirm = () => {
+    if (selections.gown?.id === "folders" && folderPrice) {
+      const price = Number.parseFloat(folderPrice) || 0
+      setSelections({
+        ...selections,
+        gownPrice: price,
+      })
+      setFolderPrice("")
+    }
   }
 
   const handleOtherGown = () => {
@@ -40,10 +53,13 @@ export default function GownSelector({ selections, setSelections }: any) {
         gown: null,
         gownPrice: 0,
       })
+      setFolderPrice("")
+      setOtherGownPrice("")
     }
   }
 
   const isOtherGownSelected = selections.gown?.id === "other"
+  const isFolderSelected = selections.gown?.id === "folders"
 
   return (
     <Card className="border-border cursor-pointer" onClick={handleCheckboxClick}>
@@ -54,9 +70,8 @@ export default function GownSelector({ selections, setSelections }: any) {
             <CardDescription>Choose your bridal gown (mandatory)</CardDescription>
           </div>
           <div
-            className={`flex-shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center ml-4 ${
-              selections.gown ? "bg-primary border-primary" : "border-border"
-            }`}
+            className={`flex-shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center ml-4 ${selections.gown ? "bg-primary border-primary" : "border-border"
+              }`}
           >
             {selections.gown && <Check className="h-4 w-4 text-white" />}
           </div>
@@ -69,9 +84,8 @@ export default function GownSelector({ selections, setSelections }: any) {
               key={gown.id}
               variant={selections.gown?.id === gown.id ? "default" : "outline"}
               onClick={() => handleSelectFolder(gown)}
-              className={`h-auto p-4 justify-start text-left flex flex-col items-start ${
-                selections.gown?.id === gown.id ? "bg-primary text-primary-foreground" : "hover:border-primary"
-              }`}
+              className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selections.gown?.id === gown.id ? "bg-primary text-primary-foreground" : "hover:border-primary"
+                }`}
             >
               <div className="font-semibold">{gown.name}</div>
               <div className="text-xs text-gray-500 font-medium">Included in base package</div>
@@ -79,15 +93,35 @@ export default function GownSelector({ selections, setSelections }: any) {
           ))}
         </div>
 
+        {isFolderSelected && (
+          <div className="border-t pt-4 space-y-3">
+            <label className="text-sm font-medium text-foreground">Enter gown price ($)</label>
+            <div className="flex gap-2">
+              <Input
+                type="number"
+                placeholder="0"
+                value={folderPrice}
+                onChange={(e) => setFolderPrice(e.target.value)}
+                className="flex-1"
+              />
+              <Button onClick={handleFolderPriceConfirm} className="bg-primary hover:bg-primary/90">
+                Confirm
+              </Button>
+            </div>
+            {selections.gownPrice > 0 && (
+              <p className="text-sm text-green-600 font-medium">Price set: ${selections.gownPrice}</p>
+            )}
+          </div>
+        )}
+
         <div className="border-t pt-4 space-y-3">
           <Button
             variant={isOtherGownSelected ? "default" : "outline"}
             onClick={() =>
               setSelections({ ...selections, gown: { id: "other", name: "Other Gowns (Outside Folders)" } })
             }
-            className={`w-full h-auto p-4 justify-start text-left flex flex-col items-start ${
-              isOtherGownSelected ? "bg-primary text-primary-foreground" : "hover:border-primary"
-            }`}
+            className={`w-full h-auto p-4 justify-start text-left flex flex-col items-start ${isOtherGownSelected ? "bg-primary text-primary-foreground" : "hover:border-primary"
+              }`}
           >
             <div className="font-semibold">Other Gowns (Outside Folders)</div>
             <div className="text-xs text-yellow-600 font-medium">Top Up Required</div>

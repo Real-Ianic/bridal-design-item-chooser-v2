@@ -14,17 +14,19 @@ export default function Home() {
     gown: null,
     gownPrice: 0,
     photography: null,
+    photographyPrice: 0,
     videography: null,
+    videographyPrice: 0,
     hairMakeup: null,
+    hairMakeupPrice: 0,
     florist: false,
+    floristPrice: 0,
     hairMakeupLooks: 1,
-    freshLooks: 1, // Default value to match the shared type
+    freshLooks: 1,
   })
 
-  const basePrice = 7088
-
   const calculatePrice = () => {
-    let total = basePrice
+    let total = 0
     if (selections.gownPrice) total += selections.gownPrice
     if (selections.photography?.price) total += selections.photography.price
     if (selections.videography?.price) total += selections.videography.price

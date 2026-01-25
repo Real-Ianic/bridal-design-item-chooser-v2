@@ -4,6 +4,7 @@ import type React from "react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Check } from "lucide-react"
 import { PRICING_CONFIG } from "@/lib/pricing-config"
@@ -12,14 +13,17 @@ const photographyOptions = Object.values(PRICING_CONFIG.photography)
 
 export default function PhotographySelector({ selections, setSelections }: any) {
   const [isExpanded, setIsExpanded] = useState(false)
+  const [customPrice, setCustomPrice] = useState<string>("")
 
   const handleToggle = () => {
     if (isExpanded) {
       setSelections({
         ...selections,
         photography: null,
+        photographyPrice: 0,
       })
       setIsExpanded(false)
+      setCustomPrice("")
     } else {
       setIsExpanded(true)
     }
@@ -31,8 +35,10 @@ export default function PhotographySelector({ selections, setSelections }: any) 
       setSelections({
         ...selections,
         photography: null,
+        photographyPrice: 0,
       })
       setIsExpanded(false)
+      setCustomPrice("")
     }
   }
 
@@ -40,7 +46,20 @@ export default function PhotographySelector({ selections, setSelections }: any) 
     setSelections({
       ...selections,
       photography,
+      photographyPrice: 0,
     })
+    setCustomPrice("")
+  }
+
+  const handlePriceConfirm = () => {
+    if (selections.photography && customPrice) {
+      const price = Number.parseFloat(customPrice) || 0
+      setSelections({
+        ...selections,
+        photographyPrice: price,
+      })
+      setCustomPrice("")
+    }
   }
 
   return (
@@ -53,9 +72,8 @@ export default function PhotographySelector({ selections, setSelections }: any) 
           </div>
           <div
             onClick={handleCheckboxClick}
-            className={`flex-shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center ml-4 cursor-pointer ${
-              selections.photography ? "bg-primary border-primary" : "border-border"
-            }`}
+            className={`flex-shrink-0 w-6 h-6 rounded border-2 flex items-center justify-center ml-4 cursor-pointer ${selections.photography ? "bg-primary border-primary" : "border-border"
+              }`}
           >
             {selections.photography && <Check className="h-4 w-4 text-white" />}
           </div>
@@ -70,11 +88,10 @@ export default function PhotographySelector({ selections, setSelections }: any) 
                 key={photo.id}
                 variant={selections.photography?.id === photo.id ? "default" : "outline"}
                 onClick={() => handleSelect(photo)}
-                className={`h-auto p-4 justify-start text-left flex flex-col items-start ${
-                  selections.photography?.id === photo.id
+                className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selections.photography?.id === photo.id
                     ? "bg-primary text-primary-foreground"
                     : "hover:border-primary"
-                }`}
+                  }`}
               >
                 <div className="font-semibold">{photo.name}</div>
                 {photo.topUp > 0 ? (
@@ -85,16 +102,43 @@ export default function PhotographySelector({ selections, setSelections }: any) 
               </Button>
             ))}
           </div>
+
+          {selections.photography && (
+            <div className="border-t pt-4 space-y-3">
+              <label className="text-sm font-medium text-foreground">Enter price for {selections.photography.name} ($)</label>
+              <div className="flex gap-2">
+                <Input
+                  type="number"
+                  placeholder="0"
+                  value={customPrice}
+                  onChange={(e) => setCustomPrice(e.target.value)}
+                  className="flex-1"
+                />
+                <Button onClick={handlePriceConfirm} className="bg-primary hover:bg-primary/90">
+                  Confirm
+                </Button>
+              </div>
+              {selections.photographyPrice > 0 && (
+                <p className="text-sm text-green-600 font-medium">Price set: ${selections.photographyPrice}</p>
+              )}
+            </div>
+          )}
         </CardContent>
       )}
 
       {selections.photography && !isExpanded && (
-        <CardContent className="text-sm border-t pt-3">
+        <CardContent className="text-sm border-t pt-3 space-y-2">
           <p>
             <span className="font-semibold">Selected:</span> {selections.photography.name}
           </p>
+          {selections.photographyPrice > 0 && (
+            <p>
+              <span className="font-semibold">Price:</span> ${selections.photographyPrice}
+            </p>
+          )}
         </CardContent>
       )}
     </Card>
   )
 }
+
