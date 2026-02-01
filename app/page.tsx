@@ -1,14 +1,18 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import PackageConfigurator from "@/components/package-configurator"
 import OrderSummary from "@/components/order-summary"
 import Header from "@/components/header"
 
 // Import the shared Selections type
 import { Selections } from "@/lib/selections"
+import { fetchAllPricingData, type PricingData } from "@/lib/google-sheets-service"
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [pricingData, setPricingData] = useState<PricingData | null>(null)
+
   // Update the selections state with the shared Selections type
   const [selections, setSelections] = useState<Selections>({
     gown: null,
@@ -20,18 +24,36 @@ export default function Home() {
     hairMakeup: null,
     hairMakeupPrice: 0,
     florist: false,
+    floristData: null,
     floristPrice: 0,
     hairMakeupLooks: 1,
     freshLooks: 1,
   })
 
+  // Fetch pricing data from Google Sheets on mount
+  useEffect(() => {
+    async function loadPricingData() {
+      setIsLoading(true)
+      try {
+        const data = await fetchAllPricingData()
+        setPricingData(data)
+      } catch (error) {
+        console.error("Failed to load pricing data:", error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+
+    loadPricingData()
+  }, [])
+
   const calculatePrice = () => {
     let total = 0
     if (selections.gownPrice) total += selections.gownPrice
-    if (selections.photography?.price) total += selections.photography.price
-    if (selections.videography?.price) total += selections.videography.price
-    if (selections.hairMakeup?.price) total += selections.hairMakeup.price
-    if (selections.hairMakeupLooks === 2) total += 500 // Example top-up for 2 fresh looks
+    if (selections.photographyPrice) total += selections.photographyPrice
+    if (selections.videographyPrice) total += selections.videographyPrice
+    if (selections.hairMakeupPrice) total += selections.hairMakeupPrice
+    if (selections.floristPrice) total += selections.floristPrice
     return total
   }
 
@@ -41,6 +63,20 @@ export default function Home() {
       !!selections.photography || !!selections.videography || !!selections.hairMakeup || selections.florist
 
     return hasGown && hasOtherService
+  }
+
+  if (isLoading) {
+    return (
+      <main className="min-h-screen bg-background">
+        <Header />
+        <div className="max-w-7xl mx-auto px-4 py-12">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            <p className="mt-4 text-muted-foreground">Loading pricing data...</p>
+          </div>
+        </div>
+      </main>
+    )
   }
 
   return (
@@ -59,7 +95,11 @@ export default function Home() {
 
         <div className="grid gap-8">
           <div className="lg:col-span-2">
-            <PackageConfigurator selections={selections} setSelections={setSelections} />
+            <PackageConfigurator
+              selections={selections}
+              setSelections={setSelections}
+              pricingData={pricingData}
+            />
           </div>
           <div>
             <OrderSummary selections={selections} totalPrice={calculatePrice()} isComplete={isPackageComplete()} />

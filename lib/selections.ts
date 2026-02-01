@@ -1,18 +1,26 @@
-// Ensure this file is recognized as a module
-export { };
-
 // Define the shared Selections interface
+export interface ItemSelection {
+    id: string
+    name: string
+    description: string
+    option: string
+    price: number
+    customPrice: boolean
+}
+
 export interface Selections {
-    gown: string | null;
+    gown: ItemSelection | null;
     gownPrice: number;
-    photography: { id: number; name: string; price: number; description: string } | null;
+    photography: ItemSelection | null;
     photographyPrice: number;
-    videography: { id: number; name: string; price: number; description: string } | null;
+    videography: ItemSelection | null;
     videographyPrice: number;
-    hairMakeup: { id: string; name: string; price: number } | null;
+    hairMakeup: ItemSelection | null;
     hairMakeupPrice: number;
-    florist: boolean;
+    floristData: ItemSelection | null; // Changed from boolean to object
     floristPrice: number;
+    // Legacy fields possibly not used anymore but kept for safety
     hairMakeupLooks: number;
     freshLooks: number;
+    florist: boolean; // boolean flag
 }

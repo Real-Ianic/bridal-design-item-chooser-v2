@@ -10,13 +10,16 @@ import HairMakeupSelector from "./selectors/hair-makeup-selector"
 import FloristSelector from "./selectors/florist-selector"
 import Link from "next/link"
 import { Selections } from "@/lib/selections"
+import { PricingData } from "@/lib/google-sheets-config"
 
 export default function PackageConfigurator({
   selections,
   setSelections,
+  pricingData,
 }: {
   selections: Selections
   setSelections: (s: Selections) => void
+  pricingData: PricingData | null
 }) {
   const [showDetails, setShowDetails] = useState(true)
 
@@ -58,11 +61,11 @@ export default function PackageConfigurator({
         </>
       ) : (
         <>
-          <GownSelector selections={selections} setSelections={setSelections} />
-          <PhotographySelector selections={selections} setSelections={setSelections} />
-          <VideographySelector selections={selections} setSelections={setSelections} />
-          <HairMakeupSelector selections={selections} setSelections={setSelections} />
-          <FloristSelector selections={selections} setSelections={setSelections} />
+          <GownSelector selections={selections} setSelections={setSelections} items={pricingData?.dress || []} />
+          <PhotographySelector selections={selections} setSelections={setSelections} items={pricingData?.photography || []} />
+          <VideographySelector selections={selections} setSelections={setSelections} items={pricingData?.videography || []} />
+          <HairMakeupSelector selections={selections} setSelections={setSelections} items={pricingData?.hairMakeup || []} />
+          <FloristSelector selections={selections} setSelections={setSelections} items={pricingData?.florist || []} />
 
           <Link
             href={`/summary?${createSummaryParams()}`}

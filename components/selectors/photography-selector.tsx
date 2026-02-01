@@ -7,13 +7,20 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Check } from "lucide-react"
-import { PRICING_CONFIG } from "@/lib/pricing-config"
+import { ItemData } from "@/lib/google-sheets-config"
 
-const photographyOptions = Object.values(PRICING_CONFIG.photography)
-
-export default function PhotographySelector({ selections, setSelections }: any) {
+export default function PhotographySelector({
+  selections,
+  setSelections,
+  items
+}: {
+  selections: any
+  setSelections: any
+  items: ItemData[]
+}) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [customPrice, setCustomPrice] = useState<string>("")
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null)
 
   const handleToggle = () => {
     if (isExpanded) {
@@ -24,6 +31,7 @@ export default function PhotographySelector({ selections, setSelections }: any) 
       })
       setIsExpanded(false)
       setCustomPrice("")
+      setSelectedOptionIndex(null)
     } else {
       setIsExpanded(true)
     }
@@ -39,15 +47,26 @@ export default function PhotographySelector({ selections, setSelections }: any) 
       })
       setIsExpanded(false)
       setCustomPrice("")
+      setSelectedOptionIndex(null)
     }
   }
 
-  const handleSelect = (photography: any) => {
+  const handleSelect = (item: ItemData, optionIndex: number) => {
+    const option = item.options[optionIndex]
+
     setSelections({
       ...selections,
-      photography,
-      photographyPrice: 0,
+      photography: {
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        option: option.optionValues.join(", "),
+        price: option.customPrice ? 0 : option.price,
+        customPrice: option.customPrice,
+      },
+      photographyPrice: option.customPrice ? 0 : option.price,
     })
+    setSelectedOptionIndex(optionIndex)
     setCustomPrice("")
   }
 
@@ -60,6 +79,15 @@ export default function PhotographySelector({ selections, setSelections }: any) 
       })
       setCustomPrice("")
     }
+  }
+
+  const isSelected = (item: ItemData, optionIndex: number) => {
+    if (!selections.photography) return false
+    const option = item.options[optionIndex]
+    return (
+      selections.photography.id === item.id &&
+      selections.photography.option === option.optionValues.join(", ")
+    )
   }
 
   return (
@@ -83,29 +111,38 @@ export default function PhotographySelector({ selections, setSelections }: any) 
       {isExpanded && (
         <CardContent className="space-y-3">
           <div className="grid gap-3">
-            {photographyOptions.map((photo) => (
-              <Button
-                key={photo.id}
-                variant={selections.photography?.id === photo.id ? "default" : "outline"}
-                onClick={() => handleSelect(photo)}
-                className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selections.photography?.id === photo.id
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:border-primary"
-                  }`}
-              >
-                <div className="font-semibold">{photo.name}</div>
-                {photo.topUp > 0 ? (
-                  <div className="text-xs text-yellow-600 font-medium">Top Up Required</div>
-                ) : (
-                  <div className="text-xs text-gray-500 font-medium">Included in base package</div>
-                )}
-              </Button>
-            ))}
+            {items.map((item) =>
+              item.options.map((option, optionIndex) => {
+                const selected = isSelected(item, optionIndex)
+                const displayName = option.optionValues.length > 0
+                  ? `${item.name} - ${option.optionValues.join(" + ")}`
+                  : item.name
+
+                return (
+                  <Button
+                    key={`${item.id}-${optionIndex}`}
+                    variant={selected ? "default" : "outline"}
+                    onClick={() => handleSelect(item, optionIndex)}
+                    className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selected
+                      ? "bg-primary text-primary-foreground"
+                      : "hover:border-primary"
+                      }`}
+                  >
+                    <div className="font-semibold">{displayName}</div>
+                    {option.description && (
+                      <div className="text-xs opacity-80 mt-1">{option.description}</div>
+                    )}
+                  </Button>
+                )
+              })
+            )}
           </div>
 
-          {selections.photography && (
+          {selections.photography && items.find(item => item.id === selections.photography.id)?.options.find(opt => opt.optionValues.join(", ") === selections.photography.option)?.customPrice && (
             <div className="border-t pt-4 space-y-3">
-              <label className="text-sm font-medium text-foreground">Enter price for {selections.photography.name} ($)</label>
+              <label className="text-sm font-medium text-foreground">
+                Enter price for {selections.photography.name} ($)
+              </label>
               <div className="flex gap-2">
                 <Input
                   type="number"
@@ -130,6 +167,7 @@ export default function PhotographySelector({ selections, setSelections }: any) 
         <CardContent className="text-sm border-t pt-3 space-y-2">
           <p>
             <span className="font-semibold">Selected:</span> {selections.photography.name}
+            {selections.photography.option && ` - ${selections.photography.option}`}
           </p>
           {selections.photographyPrice > 0 && (
             <p>
@@ -141,4 +179,3 @@ export default function PhotographySelector({ selections, setSelections }: any) 
     </Card>
   )
 }
-

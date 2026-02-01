@@ -1,172 +1,533 @@
-[00:00:04.214] Server  LOG      ✓ Ready in 2.6s
-[00:06:07.698] Server  LOG      ○ Compiling / ...
-[00:06:14.744] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:15.086] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:06:15.086] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:06:15.086] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:06:15.086] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769326504130}
-[00:13:04.187] Server  LOG      ✓ Compiled in 369ms
-[00:13:14.579] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769326923608}
-[00:14:44.648] Server  LOG      ✓ Compiled in 207ms
-[00:14:53.541] Server  LOG      ✓ Compiled in 171ms
-[00:15:02.759] Server  LOG      ✓ Compiled in 627ms
-[00:15:12.082] Server  LOG      ✓ Compiled in 200ms
-[00:15:18.647] Server  LOG      ✓ Compiled in 174ms
-[00:16:16.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:16.816] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-https://react.dev/link/hydration-mismatch
-
-  ...
-    <SegmentViewNode type="page" pagePath="summary/pa...">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
-        <SummaryPage params={Promise} searchParams={Promise}>
-          <Suspense fallback={<div>}>
-            <SummaryContent>
-              <main className="min-h-scre...">
-                <Header>
-                <div className="max-w-2xl ...">
-                  <div>
-                  <div>
-                  <Card className="border-pri...">
-                    <div data-slot="card" className="text-card-...">
-                      <CardHeader>
-                      <CardContent className="space-y-2">
-                        <div data-slot="card-content" className="px-6 space...">
-                          <div className="flex justi...">
-                            <span>
-                            <span>
-+                             7,088
--                             7.088
-                          ...
-                  ...
-    ...
-
-[00:16:16.816] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:16:16.816] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:16.816] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
-[00:16:16.816] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327105855}
-[00:16:29.361] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:29.514] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:16:29.515] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:29.515] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:16:29.515] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327118553}
-[00:16:31.366] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'toString')
-[00:16:37.063] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:37.215] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+[00:00:16.906] Server  LOG      ✓ Ready in 10.6s
+[00:07:59.454] Server  LOG      ○ Compiling / ...
+[00:08:06.460] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:06.615] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:08:06.615] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
-[00:16:37.215] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+[00:08:06.764] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:08:06.764] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:08:06.764] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769948412425}
+[00:08:06.969] Browser ERROR   Error fetching sheet "Photography": {}
+[00:08:06.969] Browser ERROR   Error fetching sheet "Florist": {}
+[00:08:06.969] Browser ERROR   Error fetching sheet "Videography": {}
+[00:08:06.969] Browser ERROR   Error fetching sheet "Dress": {}
+[00:08:06.969] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:09:26.275] Server  LOG        Reload env: .env.local
+[00:09:26.410] Server  LOG      ✓ Compiled in 21ms
+[00:09:28.734] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:28.734] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:28.734] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:28.734] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:28.734] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:09:28.734] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769948494456}
+[00:09:29.114] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:09:29.114] Browser ERROR   Error fetching sheet "Photography": {}
+[00:09:29.114] Browser ERROR   Error fetching sheet "Videography": {}
+[00:09:29.114] Browser ERROR   Error fetching sheet "Dress": {}
+[00:09:29.114] Browser ERROR   Error fetching sheet "Florist": {}
+[00:09:39.498] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:39.702] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:39.702] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:09:39.702] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:09:39.702] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:09:39.702] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769948505356}
+[00:09:40.006] Browser ERROR   Error fetching sheet "Photography": {}
+[00:09:40.006] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:09:40.006] Browser ERROR   Error fetching sheet "Florist": {}
+[00:09:40.006] Browser ERROR   Error fetching sheet "Videography": {}
+[00:09:40.006] Browser ERROR   Error fetching sheet "Dress": {}
+[00:11:02.125] Server  LOG        Reload env: .env.local
+[00:11:02.508] Server  LOG      ✓ Compiled in 0ms
+[00:11:46.027] Server  LOG      ✓ Compiled in 272ms
+[00:23:20.342] Server  LOG        Reload env: .env.local
+[00:23:20.478] Server  LOG      ✓ Compiled in 14ms
+[00:23:30.407] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:30.736] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:23:30.736] Browser LOG     📊 Fetching data from sheet: Photography
+[00:23:30.736] Browser LOG     📊 Fetching data from sheet: Dress
+[00:23:30.736] Browser LOG     📊 Fetching data from sheet: Videography
+[00:23:30.736] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[00:23:30.736] Browser LOG     📊 Fetching data from sheet: Florist
+[00:23:30.736] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:23:30.736] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:23:30.736] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:23:30.736] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769949336395}
+[00:23:31.726] Browser ERROR   ❌ Failed to fetch sheet "Videography": 403 
+[00:23:31.726] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+[00:23:31.726] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:23:31.726] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:23:31.726] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:23:31.726] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:23:31.726] Browser ERROR   Error fetching sheet "Videography": {}
+[00:23:31.726] Browser ERROR   ❌ Failed to fetch sheet "Dress": 403 
+[00:23:31.726] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+[00:23:31.726] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:23:31.726] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:23:31.726] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:23:31.726] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:23:31.726] Browser ERROR   Error fetching sheet "Dress": {}
+[00:23:31.726] Browser ERROR   ❌ Failed to fetch sheet "HairMakeUp": 403 
+[00:23:31.726] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-https://react.dev/link/hydration-mismatch
+[00:23:31.726] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:23:31.726] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:23:31.726] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:23:31.726] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:23:31.726] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:23:31.726] Browser ERROR   ❌ Failed to fetch sheet "Photography": 403 
+[00:23:31.726] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-  ...
-    <SegmentViewNode type="page" pagePath="summary/pa...">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
-        <SummaryPage params={Promise} searchParams={Promise}>
-          <Suspense fallback={<div>}>
-            <SummaryContent>
-              <main className="min-h-scre...">
-                <Header>
-                <div className="max-w-2xl ...">
-                  <div>
-                  <div>
-                  <Card className="border-pri...">
-                    <div data-slot="card" className="text-card-...">
-                      <CardHeader>
-                      <CardContent className="space-y-2">
-                        <div data-slot="card-content" className="px-6 space...">
-                          <div className="flex justi...">
-                            <span>
-                            <span>
-+                             7,088
--                             7.088
-                          ...
-                  ...
-    ...
+[00:23:31.726] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:23:31.726] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:23:31.726] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:23:31.726] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:23:31.726] Browser ERROR   Error fetching sheet "Photography": {}
+[00:23:31.726] Browser ERROR   ❌ Failed to fetch sheet "Florist": 403 
+[00:23:31.726] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-[00:16:37.215] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:16:37.215] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:37.215] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
-[00:16:37.215] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=0&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&videography=%7B%22id%22%3A4%2C%22name%22%3A%22Highest+Kite%22%2C%22price%22%3A10088%2C%22description%22%3A%22Cinematic%22%2C%22topUp%22%3A1%7D&hairMakeup=%7B%22id%22%3A%22a3%22%2C%22name%22%3A%22Principal+MUA%22%2C%22price%22%3A8288%2C%22topUp%22%3A1%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&freshLooks=1&florist=true","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327126260}
-[00:16:41.903] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:42.064] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:16:42.064] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:16:42.064] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:16:42.064] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327131103}
-[00:16:47.000] Server  LOG      ✓ Compiled in 139ms
-[00:17:12.201] Server  LOG      ✓ Compiled in 143ms
-[00:17:16.025] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:16.198] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:17:16.198] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:17:16.198] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:17:16.198] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327165240}
-[00:17:54.528] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=155&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=0&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=5000&hairMakeup=%7B%22id%22%3A%22b1%22%2C%22name%22%3A%22Alycia+Tan%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Alycia+Tan%22%7D&hairMakeupPrice=500&freshLooks=1&florist=true&floristPrice=500 color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=155&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=0&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=5000&hairMakeup=%7B%22id%22%3A%22b1%22%2C%22name%22%3A%22Alycia+Tan%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Alycia+Tan%22%7D&hairMakeupPrice=500&freshLooks=1&florist=true&floristPrice=500","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327203564}
-[00:19:05.777] Server  LOG      ✓ Compiled in 172ms
-[00:19:51.566] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:19:51.747] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:19:51.747] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/summary","route":"/summary"}
-[00:19:51.747] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=155&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=0&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=5000&hairMakeup=%7B%22id%22%3A%22b1%22%2C%22name%22%3A%22Alycia+Tan%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Alycia+Tan%22%7D&hairMakeupPrice=500&freshLooks=1&florist=true&floristPrice=500 color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=155&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=0&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=5000&hairMakeup=%7B%22id%22%3A%22b1%22%2C%22name%22%3A%22Alycia+Tan%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Alycia+Tan%22%7D&hairMakeupPrice=500&freshLooks=1&florist=true&floristPrice=500","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327320737}
-[00:19:51.747] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+[00:23:31.726] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:23:31.726] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:23:31.726] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:23:31.726] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:23:31.726] Browser ERROR   Error fetching sheet "Florist": {}
+[00:39:47.784] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:48.058] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:39:48.058] Browser LOG     📊 Fetching data from sheet: Photography
+[00:39:48.059] Browser LOG     📊 Fetching data from sheet: Dress
+[00:39:48.059] Browser LOG     📊 Fetching data from sheet: Videography
+[00:39:48.059] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[00:39:48.059] Browser LOG     📊 Fetching data from sheet: Florist
+[00:39:48.059] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:39:48.059] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:39:48.059] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:39:48.059] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769950313716}
+[00:39:48.593] Browser ERROR   ❌ Failed to fetch sheet "Photography": 403 
+[00:39:48.593] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+[00:39:48.593] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:39:48.593] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:39:48.593] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:39:48.593] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:39:48.593] Browser ERROR   Error fetching sheet "Photography": {}
+[00:39:48.593] Browser ERROR   ❌ Failed to fetch sheet "Dress": 403 
+[00:39:48.593] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+[00:39:48.593] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:39:48.593] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:39:48.593] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:39:48.593] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:39:48.593] Browser ERROR   Error fetching sheet "Dress": {}
+[00:39:48.593] Browser ERROR   ❌ Failed to fetch sheet "Florist": 403 
+[00:39:48.593] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-https://react.dev/link/hydration-mismatch
+[00:39:48.593] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:39:48.593] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:39:48.593] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:39:48.593] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:39:48.593] Browser ERROR   Error fetching sheet "Florist": {}
+[00:39:48.593] Browser ERROR   ❌ Failed to fetch sheet "HairMakeUp": 403 
+[00:39:48.593] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-  ...
-    <SegmentViewNode type="page" pagePath="summary/pa...">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function SummaryPage} serverProvidedParams={{...}}>
-        <SummaryPage params={Promise} searchParams={Promise}>
-          <Suspense fallback={<div>}>
-            <SummaryContent>
-              <main className="min-h-scre...">
-                <Header>
-                <div className="max-w-2xl ...">
-                  <div>
-                  <div>
-                  <Card className="border-pri...">
-                    <div data-slot="card" className="text-card-...">
-                      <CardHeader>
-                      <CardContent className="space-y-2">
-                        <div data-slot="card-content" className="px-6 space...">
-                          <div>
-                          <div className="flex justi...">
-                            <span>
-                            <span>
-+                             5,000
--                             5.000
-                          ...
-                  ...
-    ...
+[00:39:48.593] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:39:48.593] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:39:48.593] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:39:48.593] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:39:48.593] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:39:48.593] Browser ERROR   ❌ Failed to fetch sheet "Videography": 403 
+[00:39:48.593] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
 
-[00:19:51.747] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:19:54.275] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:19:54.480] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:19:54.480] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
-[00:19:54.481] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
-[00:19:54.481] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327323525}
-[00:20:24.990] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=1500&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=1500&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=1500&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&hairMakeupPrice=15000&freshLooks=1&florist=true&floristPrice=1500 color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%22folders%22%2C%22name%22%3A%221+Gown+from+Folder+1%2C2%2C3%22%2C%22price%22%3A0%7D&gownPrice=1500&photography=%7B%22id%22%3A1%2C%22name%22%3A%22Kent+Wong%22%2C%22price%22%3A7088%2C%22description%22%3A%22Professional+photographer%22%7D&photographyPrice=1500&videography=%7B%22id%22%3A1%2C%22name%22%3A%22Steph+Lee+Films%22%2C%22price%22%3A7088%2C%22description%22%3A%22Standard+videography%22%7D&videographyPrice=1500&hairMakeup=%7B%22id%22%3A%22a1%22%2C%22name%22%3A%22Senior+and+Lead+MUA%22%2C%22price%22%3A7088%2C%22vendor%22%3A%22Autelier+Make-up%22%7D&hairMakeupPrice=15000&freshLooks=1&florist=true&floristPrice=1500","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769327354033}
+[00:39:48.593] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:39:48.593] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:39:48.593] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:39:48.593] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:39:48.593] Browser ERROR   Error fetching sheet "Videography": {}
+[00:44:08.204] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:08.498] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:44:08.498] Browser LOG     📊 Fetching data from sheet: Photography
+[00:44:08.498] Browser LOG     📊 Fetching data from sheet: Dress
+[00:44:08.498] Browser LOG     📊 Fetching data from sheet: Videography
+[00:44:08.498] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[00:44:08.498] Browser LOG     📊 Fetching data from sheet: Florist
+[00:44:08.498] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:44:08.498] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:44:08.498] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:44:08.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769950574147}
+[00:44:08.885] Browser ERROR   ❌ Failed to fetch sheet "HairMakeUp": 403 
+[00:44:08.885] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:08.885] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:08.885] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:08.885] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:08.885] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:08.885] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:44:08.885] Browser ERROR   ❌ Failed to fetch sheet "Dress": 403 
+[00:44:08.885] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:08.885] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:08.886] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:08.886] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:08.886] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:08.886] Browser ERROR   Error fetching sheet "Dress": {}
+[00:44:08.886] Browser ERROR   ❌ Failed to fetch sheet "Videography": 403 
+[00:44:08.886] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:08.886] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:08.886] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:08.886] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:08.886] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:08.886] Browser ERROR   Error fetching sheet "Videography": {}
+[00:44:08.886] Browser ERROR   ❌ Failed to fetch sheet "Florist": 403 
+[00:44:08.886] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:08.886] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:08.886] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:08.886] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:08.886] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:08.886] Browser ERROR   Error fetching sheet "Florist": {}
+[00:44:08.886] Browser ERROR   ❌ Failed to fetch sheet "Photography": 403 
+[00:44:08.886] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:08.886] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:08.886] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:08.886] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:08.886] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:08.886] Browser ERROR   Error fetching sheet "Photography": {}
+[00:44:48.591] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:48.882] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:44:48.882] Browser LOG     📊 Fetching data from sheet: Photography
+[00:44:48.882] Browser LOG     📊 Fetching data from sheet: Dress
+[00:44:48.882] Browser LOG     📊 Fetching data from sheet: Videography
+[00:44:48.882] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[00:44:48.882] Browser LOG     📊 Fetching data from sheet: Florist
+[00:44:48.882] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:44:48.882] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:44:48.882] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:44:48.882] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769950614539}
+[00:44:49.295] Browser ERROR   ❌ Failed to fetch sheet "Dress": 403 
+[00:44:49.295] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:49.295] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:49.295] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:49.295] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:49.295] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:49.295] Browser ERROR   Error fetching sheet "Dress": {}
+[00:44:49.295] Browser ERROR   ❌ Failed to fetch sheet "HairMakeUp": 403 
+[00:44:49.295] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:49.295] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:49.295] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:49.295] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:49.295] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:49.295] Browser ERROR   Error fetching sheet "HairMakeUp": {}
+[00:44:49.295] Browser ERROR   ❌ Failed to fetch sheet "Photography": 403 
+[00:44:49.295] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:49.295] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:49.295] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:49.295] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:49.295] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:49.295] Browser ERROR   Error fetching sheet "Photography": {}
+[00:44:49.295] Browser ERROR   ❌ Failed to fetch sheet "Videography": 403 
+[00:44:49.295] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:49.295] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:49.295] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:49.295] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:49.295] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:49.295] Browser ERROR   Error fetching sheet "Videography": {}
+[00:44:49.295] Browser ERROR   ❌ Failed to fetch sheet "Florist": 403 
+[00:44:49.295] Browser ERROR   Response: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "status": "PERMISSION_DENIED"
+  }
+}
+
+[00:44:49.295] Browser ERROR   🔒 Access denied. Possible reasons:
+[00:44:49.295] Browser ERROR   1. Invalid API key - create a new one at https://console.cloud.google.com/apis/credentials
+[00:44:49.295] Browser ERROR   2. Google Sheets API not enabled for your project
+[00:44:49.295] Browser ERROR   3. Sheet is not publicly accessible and API key lacks permissions
+[00:44:49.295] Browser ERROR   Error fetching sheet "Florist": {}
+[00:47:42.867] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:47:43.153] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:47:43.154] Browser LOG     📊 Fetching data from sheet: Photography
+[00:47:43.154] Browser LOG     📊 Fetching data from sheet: Dress
+[00:47:43.154] Browser LOG     📊 Fetching data from sheet: Videography
+[00:47:43.154] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[00:47:43.154] Browser LOG     📊 Fetching data from sheet: Florist
+[00:47:43.154] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:47:43.154] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[00:47:43.154] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[00:47:43.154] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769950788811}
+[00:49:37.503] Server  LOG      ✓ Compiled in 176ms
+[00:49:42.052] Server  LOG      ✓ Compiled in 164ms
+[00:49:46.671] Server  LOG      ✓ Compiled in 264ms
+[00:49:51.766] Server  LOG      ✓ Compiled in 170ms
+[00:49:53.742] Server  LOG      ✓ Compiled in 133ms
+[01:20:43.177] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:20:43.455] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:20:43.455] Browser LOG     📊 Fetching data from sheet: Photography
+[01:20:43.455] Browser LOG     📊 Fetching data from sheet: Dress
+[01:20:43.455] Browser LOG     📊 Fetching data from sheet: Videography
+[01:20:43.455] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:20:43.455] Browser LOG     📊 Fetching data from sheet: Florist
+[01:20:43.455] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:20:43.455] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:20:43.455] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:20:43.455] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769952769108}
+[01:26:06.196] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:26:06.462] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:26:06.462] Browser LOG     📊 Fetching data from sheet: Photography
+[01:26:06.462] Browser LOG     📊 Fetching data from sheet: Dress
+[01:26:06.462] Browser LOG     📊 Fetching data from sheet: Videography
+[01:26:06.462] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:26:06.462] Browser LOG     📊 Fetching data from sheet: Florist
+[01:26:06.462] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:26:06.462] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:26:06.462] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:26:06.462] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769953092104}
+[01:27:36.260] Server  LOG      ✓ Compiled in 140ms
+[01:29:55.395] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:29:55.685] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:29:55.685] Browser LOG     📊 Fetching data from sheet: Photography
+[01:29:55.685] Browser LOG     📊 Fetching data from sheet: Dress
+[01:29:55.685] Browser LOG     📊 Fetching data from sheet: Videography
+[01:29:55.685] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:29:55.685] Browser LOG     📊 Fetching data from sheet: Florist
+[01:29:55.685] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:29:55.685] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:29:55.685] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:29:55.685] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769953321338}
+[01:36:54.062] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:36:54.377] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:36:54.377] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:36:54.377] Browser LOG     📊 Fetching data from sheet: Photography
+[01:36:54.377] Browser LOG     📊 Fetching data from sheet: Dress
+[01:36:54.377] Browser LOG     📊 Fetching data from sheet: Videography
+[01:36:54.377] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:36:54.377] Browser LOG     📊 Fetching data from sheet: Florist
+[01:36:54.377] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:36:54.377] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:36:54.377] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769953740029}
+[01:37:16.920] Server  LOG      ✓ Compiled in 161ms
+[01:40:48.544] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:40:48.842] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:40:48.842] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:40:48.842] Browser LOG     📊 Fetching data from sheet: Photography
+[01:40:48.842] Browser LOG     📊 Fetching data from sheet: Dress
+[01:40:48.842] Browser LOG     📊 Fetching data from sheet: Videography
+[01:40:48.842] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:40:48.842] Browser LOG     📊 Fetching data from sheet: Florist
+[01:40:48.842] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:40:48.842] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:40:48.842] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769953974486}
+[01:42:31.014] Server  LOG      ✓ Compiled in 192ms
+[01:43:04.418] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:43:04.732] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:43:04.732] Browser LOG     📊 Fetching data from sheet: Photography
+[01:43:04.732] Browser LOG     📊 Fetching data from sheet: Dress
+[01:43:04.732] Browser LOG     📊 Fetching data from sheet: Videography
+[01:43:04.732] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:43:04.732] Browser LOG     📊 Fetching data from sheet: Florist
+[01:43:04.732] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:43:04.732] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:43:04.732] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:43:04.732] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","r":"","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769954110376}
+[01:43:07.720] Browser ERROR   uncaughtError: TypeError: Cannot read properties of undefined (reading 'length')
+[01:43:14.704] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[01:43:14.710] Server  LOG      ✓ Compiled in 375ms
+[01:43:15.547] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:43:16.498] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:43:16.498] Browser LOG     📊 Fetching data from sheet: Photography
+[01:43:16.498] Browser LOG     📊 Fetching data from sheet: Dress
+[01:43:16.498] Browser LOG     📊 Fetching data from sheet: Videography
+[01:43:16.498] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:43:16.498] Browser LOG     📊 Fetching data from sheet: Florist
+[01:43:16.498] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:43:16.498] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:43:16.498] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769954121501}
+[01:44:31.403] Server  LOG      ✓ Compiled in 174ms
+[01:44:32.537] Browser LOG     📊 Fetching data from sheet: Photography
+[01:44:32.537] Browser LOG     📊 Fetching data from sheet: Dress
+[01:44:32.537] Browser LOG     📊 Fetching data from sheet: Videography
+[01:44:32.537] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:44:32.537] Browser LOG     📊 Fetching data from sheet: Florist
+[01:48:41.629] Server  LOG      ✓ Compiled in 226ms
+[01:48:42.498] Browser ERROR   ./lib/google-sheets-service.ts:121:1
+Parsing ecmascript source code failed
+  119 |  * Items with the same ID but different options are grouped together
+  120 |  */
+> 121 | function groupItemsByID(rows: SheetRow[]): ItemData[] {
+      | ^
+  122 |         const itemsMap = new Map<string, ItemData>()
+  123 |
+  124 |         for (const row of rows) {
+
+Expected a semicolon
+
+Import traces:
+  Client Component Browser:
+    ./lib/google-sheets-service.ts [Client Component Browser]
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/google-sheets-service.ts [Client Component SSR]
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+[01:49:06.238] Server  LOG      ✓ Compiled in 142ms
+[01:50:14.429] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:50:14.722] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:50:14.722] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:50:14.722] Browser LOG     📊 Fetching data from sheet: Photography
+[01:50:14.722] Browser LOG     📊 Fetching data from sheet: Dress
+[01:50:14.722] Browser LOG     📊 Fetching data from sheet: Videography
+[01:50:14.722] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:50:14.722] Browser LOG     📊 Fetching data from sheet: Florist
+[01:50:14.722] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:14.722] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:50:14.722] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769954540367}
+[01:50:39.645] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:50:39.947] Browser WARN    Image with src "/images/the-proposal-logo.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:50:39.947] Browser LOG     📊 Fetching data from sheet: Photography
+[01:50:39.947] Browser LOG     📊 Fetching data from sheet: Dress
+[01:50:39.947] Browser LOG     📊 Fetching data from sheet: Videography
+[01:50:39.947] Browser LOG     📊 Fetching data from sheet: HairMakeUp
+[01:50:39.947] Browser LOG     📊 Fetching data from sheet: Florist
+[01:50:39.947] Browser WARN    Image with src "http://localhost:3000/images/the-proposal-logo.png" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:50:39.947] Browser LOG     %c[Vercel Web Analytics]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
+[01:50:39.947] Browser LOG     %c[Vercel Web Analytics]%c Running queued event color: rgb(120, 120, 120) color: inherit pageview {"path":"/","route":"/"}
+[01:50:39.947] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/ color: rgb(120, 120, 120) color: inherit {"dp":"/","o":"http://localhost:3000/","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769954565596}
+[01:51:04.063] Browser LOG     %c[Vercel Web Analytics]%c [pageview] http://localhost:3000/summary?gown=%7B%22id%22%3A%221%22%2C%22name%22%3A%22Dress+From+Folder+1%2C2%2C3%22%2C%22description%22%3A%22Dress+From+Folder+1%2C2%2C3%22%2C%22option%22%3A%22%22%2C%22price%22%3A5000%2C%22customPrice%22%3Afalse%7D&gownPrice=5000&photography=%7B%22id%22%3A%221%22%2C%22name%22%3A%22Kent+Wong%22%2C%22description%22%3A%22Kent+Wong%22%2C%22option%22%3A%22%22%2C%22price%22%3A7088%2C%22customPrice%22%3Afalse%7D&photographyPrice=7088&videographyPrice=0&hairMakeupPrice=0&freshLooks=1&florist=false&floristPrice=0 color: rgb(120, 120, 120) color: inherit {"dp":"/summary","o":"http://localhost:3000/summary?gown=%7B%22id%22%3A%221%22%2C%22name%22%3A%22Dress+From+Folder+1%2C2%2C3%22%2C%22description%22%3A%22Dress+From+Folder+1%2C2%2C3%22%2C%22option%22%3A%22%22%2C%22price%22%3A5000%2C%22customPrice%22%3Afalse%7D&gownPrice=5000&photography=%7B%22id%22%3A%221%22%2C%22name%22%3A%22Kent+Wong%22%2C%22description%22%3A%22Kent+Wong%22%2C%22option%22%3A%22%22%2C%22price%22%3A7088%2C%22customPrice%22%3Afalse%7D&photographyPrice=7088&videographyPrice=0&hairMakeupPrice=0&freshLooks=1&florist=false&floristPrice=0","sdkn":"@vercel/analytics/next","sdkv":"1.6.1","sv":"0.1.3","ts":1769954589704}

@@ -7,43 +7,18 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Check } from "lucide-react"
+import { ItemData } from "@/lib/google-sheets-config"
 
-export default function GownSelector({ selections, setSelections }: any) {
-  const folderOptions = [{ id: "folders", name: "1 Gown from Folder 1,2,3", price: 0 }]
-
-  const [folderPrice, setFolderPrice] = useState<string>("")
-  const [otherGownPrice, setOtherGownPrice] = useState<string>("")
-
-  const handleSelectFolder = (gown: any) => {
-    setSelections({
-      ...selections,
-      gown,
-      gownPrice: 0,
-      gownPriceType: "folder",
-    })
-    setFolderPrice("")
-  }
-
-  const handleFolderPriceConfirm = () => {
-    if (selections.gown?.id === "folders" && folderPrice) {
-      const price = Number.parseFloat(folderPrice) || 0
-      setSelections({
-        ...selections,
-        gownPrice: price,
-      })
-      setFolderPrice("")
-    }
-  }
-
-  const handleOtherGown = () => {
-    const price = Number.parseFloat(otherGownPrice) || 0
-    setSelections({
-      ...selections,
-      gown: { id: "other", name: "Other Gowns (Outside Folders)", price },
-      gownPrice: price,
-      gownPriceType: "other",
-    })
-  }
+export default function GownSelector({
+  selections,
+  setSelections,
+  items
+}: {
+  selections: any
+  setSelections: any
+  items: ItemData[]
+}) {
+  const [customPrice, setCustomPrice] = useState<string>("")
 
   const handleCheckboxClick = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -53,13 +28,47 @@ export default function GownSelector({ selections, setSelections }: any) {
         gown: null,
         gownPrice: 0,
       })
-      setFolderPrice("")
-      setOtherGownPrice("")
+      setCustomPrice("")
     }
   }
 
-  const isOtherGownSelected = selections.gown?.id === "other"
-  const isFolderSelected = selections.gown?.id === "folders"
+  const handleSelect = (item: ItemData, optionIndex: number) => {
+    const option = item.options[optionIndex]
+
+    setSelections({
+      ...selections,
+      gown: {
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        option: option.optionValues.join(", "),
+        price: option.customPrice ? 0 : option.price,
+        customPrice: option.customPrice,
+      },
+      gownPrice: option.customPrice ? 0 : option.price,
+    })
+    setCustomPrice("")
+  }
+
+  const handlePriceConfirm = () => {
+    if (selections.gown?.customPrice && customPrice) {
+      const price = Number.parseFloat(customPrice) || 0
+      setSelections({
+        ...selections,
+        gownPrice: price,
+      })
+      setCustomPrice("")
+    }
+  }
+
+  const isSelected = (item: ItemData, optionIndex: number) => {
+    if (!selections.gown) return false
+    const option = item.options[optionIndex]
+    return (
+      selections.gown.id === item.id &&
+      selections.gown.option === option.optionValues.join(", ")
+    )
+  }
 
   return (
     <Card className="border-border cursor-pointer" onClick={handleCheckboxClick}>
@@ -79,32 +88,43 @@ export default function GownSelector({ selections, setSelections }: any) {
       </CardHeader>
       <CardContent className="space-y-4" onClick={(e) => e.stopPropagation()}>
         <div className="grid gap-3">
-          {folderOptions.map((gown) => (
-            <Button
-              key={gown.id}
-              variant={selections.gown?.id === gown.id ? "default" : "outline"}
-              onClick={() => handleSelectFolder(gown)}
-              className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selections.gown?.id === gown.id ? "bg-primary text-primary-foreground" : "hover:border-primary"
-                }`}
-            >
-              <div className="font-semibold">{gown.name}</div>
-              <div className="text-xs text-gray-500 font-medium">Included in base package</div>
-            </Button>
-          ))}
+          {items.map((item) =>
+            item.options.map((option, optionIndex) => {
+              const selected = isSelected(item, optionIndex)
+              const displayName = option.optionValues.length > 0
+                ? `${item.name} - ${option.optionValues.join(" + ")}`
+                : item.name
+
+              return (
+                <Button
+                  key={`${item.id}-${optionIndex}`}
+                  variant={selected ? "default" : "outline"}
+                  onClick={() => handleSelect(item, optionIndex)}
+                  className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selected ? "bg-primary text-primary-foreground" : "hover:border-primary"
+                    }`}
+                >
+                  <div className="font-semibold">{displayName}</div>
+                  {option.description && (
+                    <div className="text-xs opacity-80 mt-1">{option.description}</div>
+                  )}
+                </Button>
+              )
+            })
+          )}
         </div>
 
-        {isFolderSelected && (
+        {selections.gown && items.find(item => item.id === selections.gown.id)?.options.find(opt => opt.optionValues.join(", ") === selections.gown.option)?.customPrice && (
           <div className="border-t pt-4 space-y-3">
             <label className="text-sm font-medium text-foreground">Enter gown price ($)</label>
             <div className="flex gap-2">
               <Input
                 type="number"
                 placeholder="0"
-                value={folderPrice}
-                onChange={(e) => setFolderPrice(e.target.value)}
+                value={customPrice}
+                onChange={(e) => setCustomPrice(e.target.value)}
                 className="flex-1"
               />
-              <Button onClick={handleFolderPriceConfirm} className="bg-primary hover:bg-primary/90">
+              <Button onClick={handlePriceConfirm} className="bg-primary hover:bg-primary/90">
                 Confirm
               </Button>
             </div>
@@ -113,38 +133,6 @@ export default function GownSelector({ selections, setSelections }: any) {
             )}
           </div>
         )}
-
-        <div className="border-t pt-4 space-y-3">
-          <Button
-            variant={isOtherGownSelected ? "default" : "outline"}
-            onClick={() =>
-              setSelections({ ...selections, gown: { id: "other", name: "Other Gowns (Outside Folders)" } })
-            }
-            className={`w-full h-auto p-4 justify-start text-left flex flex-col items-start ${isOtherGownSelected ? "bg-primary text-primary-foreground" : "hover:border-primary"
-              }`}
-          >
-            <div className="font-semibold">Other Gowns (Outside Folders)</div>
-            <div className="text-xs text-yellow-600 font-medium">Top Up Required</div>
-          </Button>
-
-          {isOtherGownSelected && (
-            <div className="pl-4 space-y-2">
-              <label className="text-sm font-medium text-foreground">Enter gown price ($)</label>
-              <div className="flex gap-2">
-                <Input
-                  type="number"
-                  placeholder="0"
-                  value={otherGownPrice}
-                  onChange={(e) => setOtherGownPrice(e.target.value)}
-                  className="flex-1"
-                />
-                <Button onClick={handleOtherGown} className="bg-primary hover:bg-primary/90">
-                  Confirm
-                </Button>
-              </div>
-            </div>
-          )}
-        </div>
       </CardContent>
     </Card>
   )

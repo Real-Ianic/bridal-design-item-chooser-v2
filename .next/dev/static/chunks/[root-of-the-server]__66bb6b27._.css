@@ -999,6 +999,10 @@
     width: calc(var(--spacing) * 9);
   }
 
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
@@ -1193,10 +1197,6 @@
 
   .rotate-90 {
     rotate: 90deg;
-  }
-
-  .rotate-180 {
-    rotate: 180deg;
   }
 
   .transform {
@@ -1545,14 +1545,14 @@
     border-bottom-width: 1px;
   }
 
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
-  }
-
-  .border-l-2 {
-    border-left-style: var(--tw-border-style);
-    border-left-width: 2px;
   }
 
   .border-dashed {
@@ -2111,6 +2111,10 @@
     opacity: .7;
   }
 
+  .opacity-80 {
+    opacity: .8;
+  }
+
   .opacity-90 {
     opacity: .9;
   }
@@ -2315,6 +2319,14 @@
 
   .\[--cell-size\:--spacing\(8\)\] {
     --cell-size: calc(var(--spacing) * 8);
+  }
+
+  .fade-in {
+    --tw-enter-opacity: 0;
+  }
+
+  .slide-in-from-top-2 {
+    --tw-enter-translate-y: calc(2 * var(--spacing) * -1);
   }
 
   .group-focus-within\/menu-item\:opacity-100:is(:where(.group\/menu-item):focus-within *) {

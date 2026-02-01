@@ -7,13 +7,20 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Check } from "lucide-react"
-import { PRICING_CONFIG } from "@/lib/pricing-config"
+import { ItemData } from "@/lib/google-sheets-config"
 
-const videographyOptions = Object.values(PRICING_CONFIG.videography)
-
-export default function VideographySelector({ selections, setSelections }: any) {
+export default function VideographySelector({
+  selections,
+  setSelections,
+  items
+}: {
+  selections: any
+  setSelections: any
+  items: ItemData[]
+}) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [customPrice, setCustomPrice] = useState<string>("")
+  const [selectedOptionIndex, setSelectedOptionIndex] = useState<number | null>(null)
 
   const handleToggle = () => {
     if (isExpanded) {
@@ -24,6 +31,7 @@ export default function VideographySelector({ selections, setSelections }: any) 
       })
       setIsExpanded(false)
       setCustomPrice("")
+      setSelectedOptionIndex(null)
     } else {
       setIsExpanded(true)
     }
@@ -39,15 +47,26 @@ export default function VideographySelector({ selections, setSelections }: any) 
       })
       setIsExpanded(false)
       setCustomPrice("")
+      setSelectedOptionIndex(null)
     }
   }
 
-  const handleSelect = (videography: any) => {
+  const handleSelect = (item: ItemData, optionIndex: number) => {
+    const option = item.options[optionIndex]
+
     setSelections({
       ...selections,
-      videography,
-      videographyPrice: 0,
+      videography: {
+        id: item.id,
+        name: item.name,
+        description: item.description,
+        option: option.optionValues.join(", "),
+        price: option.customPrice ? 0 : option.price,
+        customPrice: option.customPrice,
+      },
+      videographyPrice: option.customPrice ? 0 : option.price,
     })
+    setSelectedOptionIndex(optionIndex)
     setCustomPrice("")
   }
 
@@ -62,13 +81,22 @@ export default function VideographySelector({ selections, setSelections }: any) 
     }
   }
 
+  const isSelected = (item: ItemData, optionIndex: number) => {
+    if (!selections.videography) return false
+    const option = item.options[optionIndex]
+    return (
+      selections.videography.id === item.id &&
+      selections.videography.option === option.optionValues.join(", ")
+    )
+  }
+
   return (
     <Card className="border-border">
       <CardHeader className="cursor-pointer" onClick={handleToggle}>
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <CardTitle className="text-primary">Videography</CardTitle>
-            <CardDescription>Choose your videographer</CardDescription>
+            <CardDescription>Select your videographer</CardDescription>
           </div>
           <div
             onClick={handleCheckboxClick}
@@ -83,29 +111,38 @@ export default function VideographySelector({ selections, setSelections }: any) 
       {isExpanded && (
         <CardContent className="space-y-3">
           <div className="grid gap-3">
-            {videographyOptions.map((video) => (
-              <Button
-                key={video.id}
-                variant={selections.videography?.id === video.id ? "default" : "outline"}
-                onClick={() => handleSelect(video)}
-                className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selections.videography?.id === video.id
-                    ? "bg-primary text-primary-foreground"
-                    : "hover:border-primary"
-                  }`}
-              >
-                <div className="font-semibold">{video.name}</div>
-                {video.topUp > 0 ? (
-                  <div className="text-xs text-yellow-600 font-medium">Top Up Required</div>
-                ) : (
-                  <div className="text-xs text-gray-500 font-medium">Included in base package</div>
-                )}
-              </Button>
-            ))}
+            {items.map((item) =>
+              item.options.map((option, optionIndex) => {
+                const selected = isSelected(item, optionIndex)
+                const displayName = option.optionValues.length > 0
+                  ? `${item.name} - ${option.optionValues.join(" + ")}`
+                  : item.name
+
+                return (
+                  <Button
+                    key={`${item.id}-${optionIndex}`}
+                    variant={selected ? "default" : "outline"}
+                    onClick={() => handleSelect(item, optionIndex)}
+                    className={`h-auto p-4 justify-start text-left flex flex-col items-start ${selected
+                      ? "bg-primary text-primary-foreground"
+                      : "hover:border-primary"
+                      }`}
+                  >
+                    <div className="font-semibold">{displayName}</div>
+                    {option.description && (
+                      <div className="text-xs opacity-80 mt-1">{option.description}</div>
+                    )}
+                  </Button>
+                )
+              })
+            )}
           </div>
 
-          {selections.videography && (
+          {selections.videography && items.find(item => item.id === selections.videography.id)?.options.find(opt => opt.optionValues.join(", ") === selections.videography.option)?.customPrice && (
             <div className="border-t pt-4 space-y-3">
-              <label className="text-sm font-medium text-foreground">Enter price for {selections.videography.name} ($)</label>
+              <label className="text-sm font-medium text-foreground">
+                Enter price for {selections.videography.name} ($)
+              </label>
               <div className="flex gap-2">
                 <Input
                   type="number"
@@ -130,6 +167,7 @@ export default function VideographySelector({ selections, setSelections }: any) 
         <CardContent className="text-sm border-t pt-3 space-y-2">
           <p>
             <span className="font-semibold">Selected:</span> {selections.videography.name}
+            {selections.videography.option && ` - ${selections.videography.option}`}
           </p>
           {selections.videographyPrice > 0 && (
             <p>
